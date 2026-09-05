@@ -38,28 +38,23 @@ header {
     border-bottom: 3px solid var(--rojo-mibu);
 }
 
-nav {
-    padding: var(--espacio-sm);
-    text-align: center;
+.navbar {
+    background-color: var(--azul-mibu);
 }
 
-nav ul {
-    display: flex;
-    justify-content: center;
-    gap: var(--espacio-md);
-    flex-wrap: wrap;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav a {
+.navbar .nav-link {
     color: var(--crema-mibu);
-    text-decoration: none;
+    font-family: Georgia, serif;
+    font-size: 1.2rem;
 }
 
-nav a:hover {
+.navbar .nav-link:hover {
     color: var(--rojo-mibu);
+}
+
+.navbar .nav-link.active {
+    color: var(--rojo-mibu);
+    font-weight: bold;
 }
 
 main {
@@ -105,6 +100,7 @@ main {
 
 .destacados h2 {
     font-size: 1.5625rem;
+    text-decoration: underline;
 }
 
 .destacados a {
@@ -116,8 +112,18 @@ main {
     text-decoration: none;
 }
 
+.destacados p {
+    font-size: 1.25rem;
+}
+
 .destacados a:hover {
     background-color: var(--rojo-mibu);
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
 }
 
 .producto {
@@ -131,19 +137,21 @@ main {
     line-height: 1.6;
 }
 
-.producto:nth-of-type(even) {
+.row > .col-12:nth-child(even) .producto {
     border-color: var(--rojo-mibu);
     background-color: #fffaf5;
 }
 
-.catalogo .producto:nth-child(2) .oferta {
-    display: inline-block;
+.row > .col-12:nth-child(2) .oferta {
+    display: block;
+    width: fit-content;
+    text-align: center;
     background-color: var(--rojo-mibu);
     color: var(--crema-mibu);
     padding: var(--espacio-xs) var(--espacio-sm);
     font-weight: bold;
     border-radius: 4px;
-    margin-bottom: var(--espacio-sm);
+    margin-bottom: var(--espacio-md);
 }
 
 .imagen-producto {
@@ -212,12 +220,6 @@ main {
     color: var(--rojo-mibu);
 }
 
-.catalogo {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--espacio-md);
-}
-
 /* == ID == */
 
 #pagina-actual {
@@ -228,8 +230,32 @@ main {
 
 /* == MEDIA QUERY == */
 
+@media (max-width: 1024px) {
+
+    .carousel-item img {
+        height: 350px;
+    }
+}
+
 @media (max-width: 768px) {
-    .catalogo {
-        grid-template-columns: 1fr;
+
+    .bienvenida {
+        padding: var(--espacio-lg) var(--espacio-sm);
+    }
+
+    .bienvenida h2 {
+        font-size: 1.6rem;
+    }
+
+    .carousel-item img {
+        height: 250px;
+    }
+
+    .encabezado h1 {
+        font-size: 2.5rem;
+    }
+
+    .pie {
+        flex-direction: column;
     }
 }

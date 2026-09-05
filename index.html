@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Videojuegos Mibu</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -15,16 +16,41 @@
                 para distintas plataformas
             </p>
         </div>
-        
-        <nav>
-            <ul>
-                <li><a href='index.html' id="pagina-actual">Inicio</a></li>
-                <li><a href='categorias/videojuegos.html'>Ver todo en videojuegos</a></li>
-                <li><a href='#'>Contacto</a></li>
-            </ul>
+
+        <!-- barra de navegación -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+
+                <!-- botón del menú para pantallas pequeñas -->
+                <button class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarMibu"
+                        aria-controls="navbarMibu"
+                        aria-expanded="false"
+                        aria-label="Abrir menú de navegación">
+
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- enlaces de navegación -->
+                <div class="collapse navbar-collapse justify-content-center" id="navbarMibu">
+                    <div class="navbar-nav">
+                        <a class="nav-link active"
+                        aria-current="page"
+                        href="index.html">Inicio</a>
+
+                        <a class="nav-link"
+                        href="categorias/videojuegos.html">Ver todo en videojuegos</a>
+
+                        <a class="nav-link" href="#">Contacto</a>
+                    </div>
+                </div>
+            </div>
         </nav>
     </header>
 
+    <!-- contenido principal -->
     <main>
         <section class="bienvenida">
             <h2>¡Tu próximo juego favorito podría estar aquí!</h2>
@@ -34,13 +60,80 @@
             </p>
         </section>
 
+       <!--productos destacados--> 
         <section class="destacados">
             <h2>Productos destacados</h2>
+
+            <!--carrusel, cambio de imagen cada 3s-->
+            <div class="container px-3 px-md-4 px-xl-5">
+                <div id="carouselMibu"
+                    class="carousel slide"
+                    data-bs-ride="carousel"
+                    data-bs-interval="3000">
+
+                    <div class="carousel-inner">
+
+                        <div class="carousel-item active">
+                            <img src="img/rotr.jpg"
+                            class="d-block w-100"
+                            alt="Rise of the Ronin">
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="img/tkrbwarriors.jpg"
+                            class="d-block w-100"
+                            alt="Touken Ranbu Warriors">
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="img/meikoi.jpg"
+                            class="d-block w-100"
+                            alt="Meiji Tokyo Renka">
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="img/wwht.jpg"
+                            class="d-block w-100"
+                            alt="We were here together">
+                        </div>
+
+                    </div>
+
+                    <button class="carousel-control-prev"
+                            type="button"
+                            data-bs-target="#carouselMibu"
+                            data-bs-slide="prev">
+
+                        <span class="carousel-control-prev-icon"
+                            aria-hidden="true"></span>
+
+                        <span class="visually-hidden">
+                            Anterior
+                        </span>
+
+                    </button>
+
+                    <button class="carousel-control-next"
+                            type="button"
+                            data-bs-target="#carouselMibu"
+                            data-bs-slide="next">
+
+                        <span class="carousel-control-next-icon"
+                            aria-hidden="true"></span>
+
+                        <span class="visually-hidden">
+                            Siguiente
+                        </span>
+                    </button>
+                </div>
+            </div>
+
             <p> Revisa algunos de nuestros productos <strong>más vendidos</strong>.</p>
             <a href="categorias/videojuegos.html">Ver ofertas</a>
         </section>
     </main>
 
+    <!--pie de página-->
     <footer class="pie">
         <span>Copyright © Mibu Ltda.</span> 
         <a href="/sucursales">Nuestras Tiendas</a> 
@@ -48,5 +141,6 @@
         <a href="/instagram">Instagram</a>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>

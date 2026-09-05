@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Videojuegos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+    <!--encabezado-->
     <header>
         <div class="encabezado">
             <h1>Videojuegos Mibu</h1>
@@ -15,97 +17,186 @@
                 para distintas plataformas
             </p>
         </div>
-        <nav>
-            <ul>
-                <li><a href='../index.html'>Inicio</a></li>
-                <li><a href='videojuegos.html' id="pagina-actual">Ver todo en videojuegos</a></li>
-                <li><a href='#'>Contacto</a></li>
-            </ul>
+        <!-- barra de navegación -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+
+                <!-- botón del menú para pantallas pequeñas -->
+                <button class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarMibu"
+                        aria-controls="navbarMibu"
+                        aria-expanded="false"
+                        aria-label="Abrir menú de navegación">
+
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- enlaces de navegación -->
+                <div class="collapse navbar-collapse justify-content-center" id="navbarMibu">
+                    <div class="navbar-nav">
+                        <a class="nav-link"
+                        href="../index.html">Inicio</a>
+
+                        <a class="nav-link active"
+                        aria-current="page"
+                        href="videojuegos.html">Ver todo en videojuegos</a>
+
+                        <a class="nav-link" href="#">Contacto</a>
+                    </div>
+                </div>
+            </div>
         </nav>
     </header>
 
+    <!-- contenido principal -->
     <main>
         <section>
 
             <h2>Catálogo Videojuegos</h2>
 
-            <div class="catalogo"> 
-                <article class="producto">
-                    <h3>Rise of the Ronin</h3>
-                    <figure class="imagen-producto">
-                        <img
-                        src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1340990/header_latam.jpg?t=1775540130"
-                        alt="Caratula Rise of the Ronin"
-                        title="Rise of the Ronin" >
-                        <figcaption>Disponible para Playstation 5 y PC.</figcaption>
-                    </figure>
-                    <p>
-                        Un RPG de mundo abierto ambientado en el período Bakumatsu,
-                        donde los jugadores asumen el papel de un ronin que forja su propio destino.
-                    </p>
-                    <p class="precio">$59.990</p>
-                    <a class="boton-producto" href="#"> Ver producto</a>
-                </article>
+            <!--grid con bootstrap-->
+            <div class="container">
+                <div class="row g-4"> 
+                    <!--primera card-->
+                    <div class="col-12 col-md-6 col-xl-4">
+                        <article class="card producto h-100">
 
-                <article class="producto">
-                    <span class="oferta">¡Oferta especial!</span>
-                    <h3>Touken Ranbu Warriors</h3>
-                    <figure class="imagen-producto">
-                        <img 
-                        src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1191260/header.jpg?t=1760594072" 
-                        alt="Caratula Touken Ranbu Warriors"
-                        title="Touken Ranbu Warriors" >
-                        <figcaption>Disponible para Nintendo Switch y PC.</figcaption>
-                    </figure>
-                    <p>
-                        Un juego de acción, fruto de la colaboración con el juego de simulación "Touken Ranbu ONLINE". 
-                        Los Touken Danshi, quince espadas encarnadas que vagaban sin rumbo por el espacio sin un amo, 
-                        son atacados repentinamente por el Ejército Retrógrado de la Historia.
-                    </p>
-                    <p class="precio">$39.990</p>
-                    <a class="boton-producto" href="#">Ver producto</a>
-                </article>
+                            <h3 class="card-title">Rise of the ronin</h3>
 
-                <article class="producto">
-                    <h3>Meiji Tokyo Renka Full Moon</h3>
-                    <figure class="imagen-producto">
-                        <img
-                        src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2779890/bd99748797680f1a71fdb0d21a216c87651ae8e8/header.jpg?t=1781846016"
-                        alt="Caratula Meiji Tokyo Renka Full Moon"
-                        title="Meiji Tokyo Renka Full Moon" >
-                        <figcaption>Disponible para Nintendo Switch y PC.</figcaption>
-                    </figure>
-                    <p>
-                        También conocido como Meikoi, es una novela visual de romance histórico y fantasía otome desarrollada por 
-                        dramatic create y Mages. La historia sigue a Mei Ayatsuki, una estudiante que viaja en el tiempo a la era 
-                        Meiji en Japón tras conocer a un mago autoproclamado llamado Charlie, donde conoce a grandes figuras históricas.
-                    </p>
-                    <p class="precio">$29.990</p>
-                    <a class="boton-producto" href="#">Ver producto</a>
-                </article>
+                            <figure class="imagen-producto">
 
-                <article class="producto">
-                    <h3>We were here together</h3>
-                    <figure class="imagen-producto">
-                        <img
-                        src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/865360/header.jpg?t=1764330773"
-                        alt="Caratula We were here together"
-                        title="We were here together" >
-                        <figcaption>Disponible para Playstation 4, Playstation 5, Nintendo Switch, Xbox y PC.</figcaption>
-                    </figure>
-                    <p>
-                        Un juego de aventuras cooperativo en primera persona con elementos de puzles. 
-                        En cada partida participan dos jugadores que asumen roles diferentes, quienes deben colaborar para resolver puzles.
-                        Cada jugador dispone de un walkie-talkie para comunicarse con el otro, lo que les permite
-                        resolver los puzles a los que se enfrentan.
-                    </p>
-                    <p class="precio">$19.990</p>
-                    <a class="boton-producto" href="#">Ver producto</a>
-                </article>
+                                <img
+                                src="../img/rotr.jpg"
+                                class="card-img-top"
+                                alt="Caratula Rise of the Ronin"
+                                title="Rise of the Ronin">
+
+                                <figcaption>
+                                    Disponible para Playstation 5 y PC.
+                                </figcaption>
+
+                            </figure>
+                            <div class="card-body">
+                                <p class="card-text">
+                                    Un RPG de mundo abierto ambientado en el período Bakumatsu,
+                                    donde los jugadores asumen el papel de un ronin que forja su propio destino.
+                                </p>
+
+                                <p class="precio">$59.990</p>
+
+                                <a class="btn boton-producto" href="#">Ver producto</a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!--segunda card-->
+                    <div class="col-12 col-md-6 col-xl-4">
+                        <article class="card producto h-100">
+
+                            <span class="oferta">¡Oferta especial!</span>
+                            <h3 class="card-title">Touken Ranbu Warriors</h3>
+
+                            <figure class="imagen-producto">
+
+                                <img
+                                src="../img/tkrbwarriors.jpg"
+                                class="card-img-top"
+                                alt="Caratula Touken Ranbu Warriors"
+                                title="Touken Ranbu Warriors" >
+
+                                <figcaption>
+                                    Disponible para Nintendo Switch y PC.
+                                </figcaption>
+
+                            </figure>
+                            <div class="card-body">
+                                <p class="card-text">
+                                    Un juego de acción, fruto de la colaboración con el juego de simulación "Touken Ranbu ONLINE". 
+                                    Los Touken Danshi, quince espadas encarnadas que vagaban sin rumbo por el espacio sin un amo, 
+                                    son atacados repentinamente por el Ejército Retrógrado de la Historia.
+                                </p>
+
+                                <p class="precio">$39.990</p>
+
+                                <a class="btn boton-producto" href="#">Ver producto</a>
+                            </div>
+                        </article>
+                    </div>
+                    
+                    <!--tercera card-->
+                    <div class="col-12 col-md-6 col-xl-4">
+                        <article class="card producto h-100">
+
+                            <h3 class="card-title">Meiji Tokyo Renka Full Moon</h3>
+
+                            <figure class="imagen-producto">
+
+                                <img
+                                src="../img/meikoi.jpg"
+                                class="card-img-top"
+                                alt="Caratula Meiji Tokyo Renka Full Moon"
+                                title="Meiji Tokyo Renka Full Moon" >
+
+                                <figcaption>
+                                    Disponible para Nintendo Switch y PC.
+                                </figcaption>
+
+                            </figure>
+                            <div class="card-body">
+                                <p class="card-text">
+                                    También conocido como Meikoi, es una novela visual de romance histórico y fantasía otome desarrollada por 
+                                    dramatic create y Mages. La historia sigue a Mei Ayatsuki, una estudiante que viaja en el tiempo a la era 
+                                    Meiji en Japón tras conocer a un mago autoproclamado llamado Charlie, donde conoce a grandes figuras históricas.
+                                </p>
+
+                                <p class="precio">$29.990</p>
+
+                                <a class="btn boton-producto" href="#">Ver producto</a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!--cuarta card-->
+                    <div class="col-12 col-md-6 col-xl-4">
+                        <article class="card producto h-100">
+
+                            <h3 class="card-title">We were here together</h3>
+
+                            <figure class="imagen-producto">
+
+                                <img
+                                src="../img/wwht.jpg"
+                                class="card-img-top"
+                                alt="Caratula We were here together"
+                                title="We were here together" >
+
+                                <figcaption>
+                                    Disponible para Playstation 4, Playstation 5, Nintendo Switch, Xbox y PC.
+                                </figcaption>
+
+                            </figure>
+                            <div class="card-body">
+                                <p class="card-text">
+                                    Un juego de aventuras cooperativo en primera persona con elementos de puzles. 
+                                    En cada partida participan dos jugadores que asumen roles diferentes, quienes deben colaborar para resolver puzles.
+                                    Cada jugador dispone de un walkie-talkie para comunicarse con el otro, lo que les permite
+                                    resolver los puzles a los que se enfrentan.
+                                </p>
+
+                                <p class="precio">$19.990</p>
+
+                                <a class="btn boton-producto" href="#">Ver producto</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
+    <!--pie de página-->
     <footer class="pie">
         <span>Copyright © Mibu Ltda.</span> 
         <a href="/sucursales">Nuestras Tiendas</a> 
@@ -113,5 +204,6 @@
         <a href="/instagram">Instagram</a>
     </footer>
     
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
