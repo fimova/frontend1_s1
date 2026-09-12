@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <!--encabezado-->
+    <!-- encabezado principal del sitio y navegación -->
     <header>
         <div class="encabezado">
             <h1>Videojuegos Mibu</h1>
@@ -43,22 +43,23 @@
                         aria-current="page"
                         href="videojuegos.html">Ver todo en videojuegos</a>
 
-                        <a class="nav-link" href="#">Contacto</a>
+                        <a class="nav-link" href="../forms/contacto.html">Contacto</a>
                     </div>
                 </div>
             </div>
         </nav>
     </header>
 
-    <!-- contenido principal -->
+    <!-- contenido principal de la página -->
     <main>
-        <section>
+        <!-- catálogo de videojuegos disponibles -->
+        <section class="catalogo">
 
             <h2>Catálogo Videojuegos</h2>
 
             <!--grid con bootstrap-->
             <div class="container">
-                <div class="row g-4"> 
+                <div class="row g-4" id="catalogoProductos">
                     <!--primera card-->
                     <div class="col-12 col-md-6 col-xl-4">
                         <article class="card producto h-100">
@@ -112,8 +113,7 @@
                             <div class="card-body">
                                 <p class="card-text">
                                     Un juego de acción, fruto de la colaboración con el juego de simulación "Touken Ranbu ONLINE". 
-                                    Los Touken Danshi, quince espadas encarnadas que vagaban sin rumbo por el espacio sin un amo, 
-                                    son atacados repentinamente por el Ejército Retrógrado de la Historia.
+                                    Protege la historia junto a estas espadas encarnadas.
                                 </p>
 
                                 <p class="precio">$39.990</p>
@@ -143,9 +143,8 @@
                             </figure>
                             <div class="card-body">
                                 <p class="card-text">
-                                    También conocido como Meikoi, es una novela visual de romance histórico y fantasía otome desarrollada por 
-                                    dramatic create y Mages. La historia sigue a Mei Ayatsuki, una estudiante que viaja en el tiempo a la era 
-                                    Meiji en Japón tras conocer a un mago autoproclamado llamado Charlie, donde conoce a grandes figuras históricas.
+                                    Novela visual de romance histórico y fantasía otome. Viaja en el tiempo a la era 
+                                    Meiji en Japón.
                                 </p>
 
                                 <p class="precio">$29.990</p>
@@ -176,9 +175,6 @@
                             <div class="card-body">
                                 <p class="card-text">
                                     Un juego de aventuras cooperativo en primera persona con elementos de puzles. 
-                                    En cada partida participan dos jugadores que asumen roles diferentes, quienes deben colaborar para resolver puzles.
-                                    Cada jugador dispone de un walkie-talkie para comunicarse con el otro, lo que les permite
-                                    resolver los puzles a los que se enfrentan.
                                 </p>
 
                                 <p class="precio">$19.990</p>
@@ -190,16 +186,27 @@
                 </div>
             </div>
         </section>
+
+        <!--nueva sección para probar fetch api-->
+        <section class="juegos-api">
+            <h2>Juegos recomendados</h2>
+
+            <div class="container">
+                <div class="row g-4" id="listaJuegosAPI">
+                </div>
+            </div>
+        </section>
     </main>
 
-    <!--pie de página-->
+    <!--pie de página con enlaces complementarios del sitio-->
     <footer class="pie">
         <span>Copyright © Mibu Ltda.</span> 
         <a href="/sucursales">Nuestras Tiendas</a> 
         <a href="/twitter">Twitter</a> 
         <a href="/instagram">Instagram</a>
     </footer>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/script.js"></script>
 </body>
 </html>

@@ -57,6 +57,12 @@ header {
     font-weight: bold;
 }
 
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--rojo-mibu);
+    outline-offset: 3px;
+}
+
 main {
     padding: var(--espacio-sm) 0;
 }
@@ -83,6 +89,10 @@ main {
     font-weight: bold;
     margin-top: var(--espacio-md);
     color: var(--rojo-mibu);
+}
+
+.oculto {
+    display: none;
 }
 
 .destacados {
@@ -125,6 +135,10 @@ main {
     height: auto;
 }
 
+.catalogo > h2 {
+    padding: var(--espacio-sm);
+}
+
 .producto {
     background-color: white;
     text-align: justify;
@@ -160,6 +174,34 @@ main {
 .imagen-producto img {
     max-width: 100%;
     height: auto;
+}
+
+.tarjeta-hover {
+    transform: scale(1.03);
+}
+
+.juegos-api > h2 {
+    padding: var(--espacio-sm);
+}
+
+.juegos-api article {
+    background-color: white;
+    text-align: center;
+    border: 2px solid var(--azul-mibu);
+    border-radius: 6px;
+    padding: var(--espacio-sm);
+}
+
+.juegos-api .col:nth-child(even) .producto {
+    border-color: var(--rojo-mibu);
+}
+
+.juegos-api article img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto var(--espacio-sm);
 }
 
 .encabezado {
@@ -198,6 +240,55 @@ main {
     background-color: var(--rojo-mibu);
 }
 
+.contacto {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: var(--espacio-xl) var(--espacio-sm);
+}
+
+.contacto h2 {
+    margin-bottom: var(--espacio-sm);
+    text-decoration: underline;
+}
+
+.contacto > p {
+    text-align: center;
+}
+
+.contacto form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espacio-xs);
+    margin-top: var(--espacio-lg);
+}
+
+.contacto input,
+.contacto textarea {
+    width: 100%;
+    padding: var(--espacio-xs);
+    border: 2px solid var(--azul-mibu);
+    border-radius: 4px;
+}
+
+.contacto textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.contacto button {
+    align-self: center;
+    background-color: var(--azul-mibu);
+    color: var(--crema-mibu);
+    border: none;
+    padding: var(--espacio-xs) var(--espacio-sm);
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.contacto button:hover {
+    background-color: var(--rojo-mibu);
+}
+
 .pie {
     display: flex;
     justify-content: center;
@@ -224,6 +315,12 @@ main {
 #pagina-actual {
     color: var(--rojo-mibu);
     font-family: Georgia, serif;
+    font-weight: bold;
+}
+
+#mensajeFormulario {
+    margin-top: var(--espacio-md);
+    color: var(--rojo-mibu);
     font-weight: bold;
 }
 

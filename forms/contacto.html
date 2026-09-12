@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Videojuegos Mibu</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="encabezado">
+            <h1>Videojuegos Mibu</h1>
+            <p>
+                Descubre nuestra selección de videojuegos
+                para distintas plataformas
+            </p>
+        </div>
+
+        <nav class="navbar navbar-expand-lg">
+
+            <div class="container-fluid">
+
+                <button class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarMibu"
+                        aria-controls="navbarMibu"
+                        aria-expanded="false"
+                        aria-label="Abrir menú de navegación">
+
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-center"
+                     id="navbarMibu">
+
+                    <div class="navbar-nav">
+
+                        <a class="nav-link"
+                           href="../index.html">
+                            Inicio
+                        </a>
+
+                        <a class="nav-link"
+                           href="../categorias/videojuegos.html">
+                            Ver todo en videojuegos
+                        </a>
+
+                        <a class="nav-link active"
+                           aria-current="page"
+                           href="contacto.html">
+                            Contacto
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <section class="contacto">
+
+            <h2>Contacto</h2>
+
+            <p>
+                ¿Tienes alguna consulta? Escríbenos y te responderemos.
+            </p>
+
+            <form id="formContacto">
+
+                <label for="nombre">Nombre:</label>
+
+                <input type="text"
+                       id="nombre"
+                       name="nombre"
+                       required>
+
+
+                <label for="correo">Correo:</label>
+
+                <input type="email"
+                       id="correo"
+                       name="correo"
+                       required>
+
+
+                <label for="mensaje">Mensaje:</label>
+
+                <textarea id="mensaje"
+                          name="mensaje"
+                          required></textarea>
+
+
+                <button type="submit">
+                    Enviar mensaje
+                </button>
+
+            </form>
+
+            <p id="mensajeFormulario"></p>
+
+        </section>
+
+    </main>
+
+
+    <footer class="pie">
+
+        <span>Copyright © Mibu Ltda.</span>
+
+        <a href="/sucursales">
+            Nuestras Tiendas
+        </a>
+
+        <a href="/twitter">
+            Twitter
+        </a>
+
+        <a href="/instagram">
+            Instagram
+        </a>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
