@@ -331,6 +331,19 @@ main {
     margin-top: var(--espacio-md);
     color: var(--rojo-mibu);
     font-weight: bold;
+    text-align: center;
+    padding: var(--espacio-sm);
+    border-radius: 6px;
+}
+
+.mensaje-error {
+    color:white;
+    background-color: var(--rojo-mibu);
+}
+
+.mensaje-exito {
+    color:white;
+    background-color: #28a745;
 }
 
 /* ========================================

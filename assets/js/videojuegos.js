@@ -217,6 +217,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Cargar carrito al iniciar la página
     cargarCarrito();
+    console.log("DOM cargado correctamente");
 
     // Selectores del DOM
     const listaCarrito = document.querySelector("#listaCarrito");
