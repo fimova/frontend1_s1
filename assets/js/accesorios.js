@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const accesorios = [
             {
                 titulo: "Control Pro Mibu",
-                imagen: "../img/rotr.jpg", // en este caso estoy reutilizando imágenes existentes
+                imagen: "../assets/img/rotr.jpg", // en este caso estoy reutilizando imágenes existentes
                 alt: "Control Pro Mibu",
                 titleImagen: "Control Pro Mibu",
                 info: "Compatible con PC, PS5 y Nintendo Switch.",
@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
             },
             {
                 titulo: "Auriculares Gaming Mibu",
-                imagen: "../img/tkrbwarriors.jpg",
+                imagen: "../assets/img/tkrbwarriors.jpg",
                 alt: "Auriculares Gaming Mibu",
                 titleImagen: "Auriculares Gaming Mibu",
                 info: "Sonido envolvente 7.1 virtual.",
@@ -129,7 +129,7 @@ document.addEventListener("DOMContentLoaded", () => {
             },
             {
                 titulo: "Teclado Mecánico RGB",
-                imagen: "../img/meikoi.jpg",
+                imagen: "../assets/img/meikoi.jpg",
                 alt: "Teclado Mecánico RGB",
                 titleImagen: "Teclado Mecánico RGB",
                 info: "Switches mecánicos red, iluminación RGB personalizable.",

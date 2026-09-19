@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (filaProductos) {
         const hakuoki = {
             titulo: "Hakuoki: Kyoto Winds",
-            imagen: "../img/hkw.jpg",
+            imagen: "../assets/img/hkw.jpg",
             alt: "Caratula Hakuoki: Kyoto Winds",
             titleImagen: "Hakuoki: Kyoto Winds",
             info: "Disponible para Nintendo Switch y PC.",
