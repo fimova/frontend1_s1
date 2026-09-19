@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Videojuegos</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
     <!-- encabezado principal del sitio y navegación -->
     <header>
@@ -22,13 +25,8 @@
             <div class="container-fluid">
 
                 <!-- botón del menú para pantallas pequeñas -->
-                <button class="navbar-toggler"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#navbarMibu"
-                        aria-controls="navbarMibu"
-                        aria-expanded="false"
-                        aria-label="Abrir menú de navegación">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMibu"
+                    aria-controls="navbarMibu" aria-expanded="false" aria-label="Abrir menú de navegación">
 
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -36,13 +34,9 @@
                 <!-- enlaces de navegación -->
                 <div class="collapse navbar-collapse justify-content-center" id="navbarMibu">
                     <div class="navbar-nav">
-                        <a class="nav-link"
-                        href="../index.html">Inicio</a>
-
-                        <a class="nav-link active"
-                        aria-current="page"
-                        href="videojuegos.html">Ver todo en videojuegos</a>
-
+                        <a class="nav-link" href="../index.html">Inicio</a>
+                        <a class="nav-link active" aria-current="page" href="videojuegos.html">Videojuegos</a>
+                        <a class="nav-link" href="accesorios.html">Accesorios</a>
                         <a class="nav-link" href="../forms/contacto.html">Contacto</a>
                     </div>
                 </div>
@@ -57,6 +51,15 @@
 
             <h2>Catálogo Videojuegos</h2>
 
+            <div class="container mb-4">
+                <form id="formBusqueda" class="d-flex" role="search">
+                    <input type="search" id="inputBusqueda" class="form-control me-2"
+                        placeholder="Buscar videojuego por nombre...">
+                    <button type="submit" class="btn boton-producto">Buscar</button>
+                </form>
+                <p id="mensajeBusqueda" class="mt-2 text-muted"></p>
+            </div>
+
             <!--grid con bootstrap-->
             <div class="container">
                 <div class="row g-4" id="catalogoProductos">
@@ -68,10 +71,7 @@
 
                             <figure class="imagen-producto">
 
-                                <img
-                                src="../img/rotr.jpg"
-                                alt="Caratula Rise of the Ronin"
-                                title="Rise of the Ronin">
+                                <img src="../img/rotr.jpg" alt="Caratula Rise of the Ronin" title="Rise of the Ronin">
 
                                 <figcaption>
                                     Disponible para Playstation 5 y PC.
@@ -86,7 +86,10 @@
 
                                 <p class="precio">$59.990</p>
 
-                                <a class="btn boton-producto" href="#">Ver producto</a>
+                                <button class="btn boton-producto btn-agregar-carrito" data-nombre="Rise of the ronin"
+                                    data-precio="59990">
+                                    Agregar al carrito
+                                </button>
                             </div>
                         </article>
                     </div>
@@ -100,10 +103,8 @@
 
                             <figure class="imagen-producto">
 
-                                <img
-                                src="../img/tkrbwarriors.jpg"
-                                alt="Caratula Touken Ranbu Warriors"
-                                title="Touken Ranbu Warriors" >
+                                <img src="../img/tkrbwarriors.jpg" alt="Caratula Touken Ranbu Warriors"
+                                    title="Touken Ranbu Warriors">
 
                                 <figcaption>
                                     Disponible para Nintendo Switch y PC.
@@ -112,17 +113,21 @@
                             </figure>
                             <div class="card-body">
                                 <p class="card-text">
-                                    Un juego de acción, fruto de la colaboración con el juego de simulación "Touken Ranbu ONLINE". 
+                                    Un juego de acción, fruto de la colaboración con el juego de simulación "Touken
+                                    Ranbu ONLINE".
                                     Protege la historia junto a estas espadas encarnadas.
                                 </p>
 
                                 <p class="precio">$39.990</p>
 
-                                <a class="btn boton-producto" href="#">Ver producto</a>
+                                <button class="btn boton-producto btn-agregar-carrito"
+                                    data-nombre="Touken Ranbu Warriors" data-precio="39990">
+                                    Agregar al carrito
+                                </button>
                             </div>
                         </article>
                     </div>
-                    
+
                     <!--tercera card-->
                     <div class="col-12 col-md-6 col-xl-4">
                         <article class="card producto h-100">
@@ -131,10 +136,8 @@
 
                             <figure class="imagen-producto">
 
-                                <img
-                                src="../img/meikoi.jpg"
-                                alt="Caratula Meiji Tokyo Renka Full Moon"
-                                title="Meiji Tokyo Renka Full Moon" >
+                                <img src="../img/meikoi.jpg" alt="Caratula Meiji Tokyo Renka Full Moon"
+                                    title="Meiji Tokyo Renka Full Moon">
 
                                 <figcaption>
                                     Disponible para Nintendo Switch y PC.
@@ -143,13 +146,16 @@
                             </figure>
                             <div class="card-body">
                                 <p class="card-text">
-                                    Novela visual de romance histórico y fantasía otome. Viaja en el tiempo a la era 
+                                    Novela visual de romance histórico y fantasía otome. Viaja en el tiempo a la era
                                     Meiji en Japón.
                                 </p>
 
                                 <p class="precio">$29.990</p>
 
-                                <a class="btn boton-producto" href="#">Ver producto</a>
+                                <button class="btn boton-producto btn-agregar-carrito"
+                                    data-nombre="Meiji Tokyo Renka Full Moon" data-precio="29990">
+                                    Agregar al carrito
+                                </button>
                             </div>
                         </article>
                     </div>
@@ -162,10 +168,8 @@
 
                             <figure class="imagen-producto">
 
-                                <img
-                                src="../img/wwht.jpg"
-                                alt="Caratula We were here together"
-                                title="We were here together" >
+                                <img src="../img/wwht.jpg" alt="Caratula We were here together"
+                                    title="We were here together">
 
                                 <figcaption>
                                     Disponible para Playstation 4, Playstation 5, Nintendo Switch, Xbox y PC.
@@ -174,18 +178,68 @@
                             </figure>
                             <div class="card-body">
                                 <p class="card-text">
-                                    Un juego de aventuras cooperativo en primera persona con elementos de puzles. 
+                                    Un juego de aventuras cooperativo en primera persona con elementos de puzles.
                                 </p>
 
                                 <p class="precio">$19.990</p>
 
-                                <a class="btn boton-producto" href="#">Ver producto</a>
+                                <button class="btn boton-producto btn-agregar-carrito"
+                                    data-nombre="We were here together" data-precio="19990">
+                                    Agregar al carrito
+                                </button>
                             </div>
                         </article>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- CARRITO -->
+        <!-- botón para abrir el carrito -->
+        <button class="btn btn-primary position-fixed bottom-0 end-0 m-3 rounded-circle carrito-flotante" type="button"
+            data-bs-toggle="offcanvas" data-bs-target="#offcanvasCarrito" aria-controls="offcanvasCarrito"
+            style="width: 60px; height: 60px; z-index: 1000;">
+            🛒
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                id="contadorCarrito">
+                0
+            </span>
+        </button>
+
+        <!-- Offcanvas del carrito usando bootstrap para que se abra lateralmente -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCarrito"
+            aria-labelledby="offcanvasCarritoLabel">
+            <div class="offcanvas-header" style="background-color: var(--azul-mibu); color: var(--crema-mibu);">
+                <h5 class="offcanvas-title" id="offcanvasCarritoLabel">
+                    Carrito de Compras
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul id="listaCarrito" class="list-group mb-3">
+                    <!-- items del carrito se agregan aquí -->
+                </ul>
+
+                <div class="mt-auto">
+                    <div class="d-flex justify-content-between align-items-center mb-3 p-3"
+                        style="background-color: var(--crema-mibu); border-radius: 8px;">
+                        <h5 class="mb-0">Total:</h5>
+                        <h4 class="mb-0" id="totalCarrito" style="color: var(--rojo-mibu);">$0</h4>
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <button id="btnFinalizarCompra" class="btn btn-lg"
+                            style="background-color: var(--azul-mibu); color: var(--crema-mibu);">
+                            Finalizar compra
+                        </button>
+                        <button id="btnVaciarCarrito" class="btn btn-outline-danger">
+                            Vaciar carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!--nueva sección para probar fetch api-->
         <section class="juegos-api">
@@ -200,13 +254,28 @@
 
     <!--pie de página con enlaces complementarios del sitio-->
     <footer class="pie">
-        <span>Copyright © Mibu Ltda.</span> 
-        <a href="/sucursales">Nuestras Tiendas</a> 
-        <a href="/twitter">Twitter</a> 
+        <span>Copyright © Mibu Ltda.</span>
+        <a href="/sucursales">Nuestras Tiendas</a>
+        <a href="/twitter">Twitter</a>
         <a href="/instagram">Instagram</a>
     </footer>
 
+    <!-- toast para notificaciones -->
+    <div class="toast-container position-fixed top-0 end-0 p-3">
+        <div id="toastCarrito" class="toast align-items-center text-bg-success border-0" role="alert"
+            aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body" id="toastMensaje">
+                    Producto agregado al carrito
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                    aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../js/script.js"></script>
+    <script src="../js/videojuegos.js"></script>
 </body>
+
 </html>

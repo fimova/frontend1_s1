@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accesorios - Videojuegos Mibu</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <!-- encabezado principal del sitio y navegación -->
+    <header>
+        <div class="encabezado">
+            <h1>Videojuegos Mibu</h1>
+            <p>
+                Descubre nuestra selección de videojuegos
+                para distintas plataformas
+            </p>
+        </div>
+
+        <!-- barra de navegación -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+
+                <!-- botón del menú para pantallas pequeñas -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMibu"
+                    aria-controls="navbarMibu" aria-expanded="false" aria-label="Abrir menú de navegación">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- enlaces de navegación -->
+                <div class="collapse navbar-collapse justify-content-center" id="navbarMibu">
+                    <div class="navbar-nav">
+                        <a class="nav-link" href="../index.html">Inicio</a>
+                        <a class="nav-link" href="videojuegos.html">Videojuegos</a>
+                        <a class="nav-link active" aria-current="page" href="accesorios.html">Accesorios</a>
+                        <a class="nav-link" href="../forms/contacto.html">Contacto</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- contenido principal de la página -->
+    <main>
+        <!-- catálogo de accesorios -->
+        <section class="catalogo">
+            <h2>Catálogo Accesorios</h2>
+
+            <!-- grid con bootstrap -->
+            <div class="container">
+                <div class="row g-4" id="catalogoAccesorios">
+                    <!-- Las tarjetas se crearán dinámicamente con JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- CARRITO -->
+        <!-- botón para abrir el carrito -->
+        <button class="btn btn-primary position-fixed bottom-0 end-0 m-3 rounded-circle carrito-flotante" type="button"
+            data-bs-toggle="offcanvas" data-bs-target="#offcanvasCarrito" aria-controls="offcanvasCarrito"
+            style="width: 60px; height: 60px; z-index: 1000;">
+            🛒
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                id="contadorCarrito">
+                0
+            </span>
+        </button>
+
+        <!-- Offcanvas del carrito usando bootstrap para que se abra lateralmente -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCarrito"
+            aria-labelledby="offcanvasCarritoLabel">
+            <div class="offcanvas-header" style="background-color: var(--azul-mibu); color: var(--crema-mibu);">
+                <h5 class="offcanvas-title" id="offcanvasCarritoLabel">
+                    Carrito de Compras
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul id="listaCarrito" class="list-group mb-3">
+                    <!-- items del carrito se agregan aquí -->
+                </ul>
+
+                <div class="mt-auto">
+                    <div class="d-flex justify-content-between align-items-center mb-3 p-3"
+                        style="background-color: var(--crema-mibu); border-radius: 8px;">
+                        <h5 class="mb-0">Total:</h5>
+                        <h4 class="mb-0" id="totalCarrito" style="color: var(--rojo-mibu);">$0</h4>
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <button id="btnFinalizarCompra" class="btn btn-lg"
+                            style="background-color: var(--azul-mibu); color: var(--crema-mibu);">
+                            Finalizar compra
+                        </button>
+                        <button id="btnVaciarCarrito" class="btn btn-outline-danger">
+                            Vaciar carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+        <!-- pie de página -->
+        <footer class="pie">
+            <span>Copyright © Mibu Ltda.</span>
+            <a href="/sucursales">Nuestras Tiendas</a>
+            <a href="/twitter">Twitter</a>
+            <a href="/instagram">Instagram</a>
+        </footer>
+
+        <!-- toast para notificaciones -->
+        <div class="toast-container position-fixed top-0 end-0 p-3">
+            <div id="toastCarrito" class="toast align-items-center text-bg-success border-0" role="alert"
+                aria-live="assertive" aria-atomic="true">
+                <div class="d-flex">
+                    <div class="toast-body" id="toastMensaje">
+                        Producto agregado al carrito
+                    </div>
+                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                        aria-label="Close"></button>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="../js/accesorios.js"></script>
+</body>
+</html>

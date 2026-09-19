@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Videojuegos Mibu</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <!-- encabezado principal del sitio y navegación -->
     <header>
@@ -23,13 +26,8 @@
             <div class="container-fluid">
 
                 <!-- botón del menú para pantallas pequeñas -->
-                <button class="navbar-toggler"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#navbarMibu"
-                        aria-controls="navbarMibu"
-                        aria-expanded="false"
-                        aria-label="Abrir menú de navegación">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMibu"
+                    aria-controls="navbarMibu" aria-expanded="false" aria-label="Abrir menú de navegación">
 
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -37,13 +35,9 @@
                 <!-- enlaces de navegación -->
                 <div class="collapse navbar-collapse justify-content-center" id="navbarMibu">
                     <div class="navbar-nav">
-                        <a class="nav-link active"
-                        aria-current="page"
-                        href="index.html">Inicio</a>
-
-                        <a class="nav-link"
-                        href="categorias/videojuegos.html">Ver todo en videojuegos</a>
-
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                        <a class="nav-link" href="categorias/videojuegos.html">Videojuegos</a>
+                        <a class="nav-link" href="categorias/accesorios.html">Accesorios</a>
                         <a class="nav-link" href="forms/contacto.html">Contacto</a>
                     </div>
                 </div>
@@ -64,52 +58,38 @@
             </button>
         </section>
 
-       <!--productos destacados--> 
+        <!--productos destacados-->
         <section class="destacados">
             <h2>Productos destacados</h2>
 
             <!--carrusel, cambio de imagen cada 3s-->
             <div class="container px-3 px-md-4 px-xl-5">
-                <div id="carouselMibu"
-                    class="carousel slide"
-                    data-bs-ride="carousel"
-                    data-bs-interval="3000">
+                <div id="carouselMibu" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
 
                     <div class="carousel-inner">
 
                         <div class="carousel-item active">
-                            <img src="img/rotr.jpg"
-                            class="d-block w-100"
-                            alt="Rise of the Ronin">
+                            <img src="img/rotr.jpg" class="d-block w-100" alt="Rise of the Ronin">
                         </div>
 
                         <div class="carousel-item">
-                            <img src="img/tkrbwarriors.jpg"
-                            class="d-block w-100"
-                            alt="Touken Ranbu Warriors">
+                            <img src="img/tkrbwarriors.jpg" class="d-block w-100" alt="Touken Ranbu Warriors">
                         </div>
 
                         <div class="carousel-item">
-                            <img src="img/meikoi.jpg"
-                            class="d-block w-100"
-                            alt="Meiji Tokyo Renka">
+                            <img src="img/meikoi.jpg" class="d-block w-100" alt="Meiji Tokyo Renka">
                         </div>
 
                         <div class="carousel-item">
-                            <img src="img/wwht.jpg"
-                            class="d-block w-100"
-                            alt="We were here together">
+                            <img src="img/wwht.jpg" class="d-block w-100" alt="We were here together">
                         </div>
 
                     </div>
 
-                    <button class="carousel-control-prev"
-                            type="button"
-                            data-bs-target="#carouselMibu"
-                            data-bs-slide="prev">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselMibu"
+                        data-bs-slide="prev">
 
-                        <span class="carousel-control-prev-icon"
-                            aria-hidden="true"></span>
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
 
                         <span class="visually-hidden">
                             Anterior
@@ -117,13 +97,10 @@
 
                     </button>
 
-                    <button class="carousel-control-next"
-                            type="button"
-                            data-bs-target="#carouselMibu"
-                            data-bs-slide="next">
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselMibu"
+                        data-bs-slide="next">
 
-                        <span class="carousel-control-next-icon"
-                            aria-hidden="true"></span>
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
 
                         <span class="visually-hidden">
                             Siguiente
@@ -139,13 +116,14 @@
 
     <!--pie de página con enlaces complementarios del sitio-->
     <footer class="pie">
-        <span>Copyright © Mibu Ltda.</span> 
-        <a href="/sucursales">Nuestras Tiendas</a> 
-        <a href="/twitter">Twitter</a> 
+        <span>Copyright © Mibu Ltda.</span>
+        <a href="/sucursales">Nuestras Tiendas</a>
+        <a href="/twitter">Twitter</a>
         <a href="/instagram">Instagram</a>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/index.js"></script>
 </body>
+
 </html>
