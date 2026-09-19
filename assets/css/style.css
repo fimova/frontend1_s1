@@ -249,6 +249,8 @@ main {
     background-color: var(--rojo-mibu);
 }
 
+/* == CONTACTO == */
+
 .contacto {
     max-width: 700px;
     margin: 0 auto;
@@ -260,7 +262,7 @@ main {
     text-decoration: underline;
 }
 
-.contacto > p {
+.contacto > p:not(#mensajeFormulario) {
     text-align: center;
 }
 
@@ -327,23 +329,26 @@ main {
     font-weight: bold;
 }
 
+/* == MENSAJES DEL FORMULARIO == */
+
 #mensajeFormulario {
     margin-top: var(--espacio-md);
-    color: var(--rojo-mibu);
     font-weight: bold;
     text-align: center;
     padding: var(--espacio-sm);
     border-radius: 6px;
 }
 
-.mensaje-error {
-    color:white;
-    background-color: var(--rojo-mibu);
+/* Mensaje de error */
+#mensajeFormulario.mensaje-error {
+    color: var(--rojo-mibu);
+    background-color: transparent;
 }
 
-.mensaje-exito {
-    color:white;
-    background-color: #28a745;
+/* Mensaje de éxito */
+#mensajeFormulario.mensaje-exito {
+    color: var(--rojo-mibu);
+    background-color: transparent;
 }
 
 /* ========================================
